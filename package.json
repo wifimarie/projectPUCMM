@@ -1,0 +1,21 @@
+{
+  "name": "testprjectv1",
+  "version": "1.0.0",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "truffle test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/contract": "^4.6.6",
+    "bootstrap": "^5.2.2",
+    "lite-server": "^2.6.1"
+  },
+  "keywords": [],
+  "description": ""
+}

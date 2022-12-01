@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlockSafe | Dashboard</title>
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Google icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-body bg-dark rounded-0 mb-4">
+            <h1><span class="material-icons"> grid_view </span> BlockSafe</h1>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-body bg-dark rounded-0 mb-4">
+            <div class="card-header">
+              <span class="material-icons">device_thermostat</span>
+            </div>
+            <div class="card-title h5 my-2">Dispositivos conectados:</div>
+            <p id="connected-devices">0</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-body bg-dark rounded-0 mb-4">
+            <div class="card-header">
+              <span class="material-icons">device_thermostat</span>
+            </div>
+            <div class="card-title h5 my-2">Dispositivos activos:</div>
+            <p id="active-devices">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <form id="addForm" class="card card-body rounded-0 mb-4 bg-dark">
+            <h4>Agregar dispositivo</h4>
+            <input
+              type="number"
+              id="id"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="id del dispositivo"
+              autofocus
+            />
+            <input
+              type="text"
+              id="nombre"
+              class="form-control bg-dark border-0 rounded-0 text-light my-4"
+              placeholder="Nombre del dispositivo"
+              autofocus
+            />
+            <button class="btn btn-primary">Añadir dispositivo</button>
+          </form>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card card-body bg-dark rounded-0 mb-4">
+            <p>Dispositivos agregados:</p>
+            <table class="table table-borderless">
+              <tr class="bg-info">
+                <th>Id</th>
+                <th>Nombre dispositivo</th>
+                <th>Estado</th>
+                <th>Agregado en:</th>
+              </tr>
+              <tbody id="myTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fin del contenedor de la pagina web-->
+    </div>
+
+    <!-- <script src="/libs/web3/dist/web3.min.js"></script> -->
+    <script src="/libs/@truffle\contract\browser-dist\truffle-contract.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./ui.js"></script>
+  </body>
+</html>
